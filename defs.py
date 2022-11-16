@@ -1,5 +1,6 @@
 import string
 import random
+import pygame
 
 
 def key_maker(enter):  # генератор ключа
@@ -16,3 +17,12 @@ def key_maker(enter):  # генератор ключа
 def random_choice(a): # рандомайзер
     b = random.choice(a)
     return b
+
+
+def play(): # проигрывание музыки
+    pygame.mixer.music.load("MUS.mp3")
+    pygame.mixer.music.play(loops=0)
+
+
+def stop(): # остановка музыки
+    pygame.mixer.music.stop()
